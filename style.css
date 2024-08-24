@@ -19,8 +19,13 @@ body {
     margin-top: -10px;
 }
 
-.stats-container {
+.stats-container{
     display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-wrap: nowrap; 
+    cursor: pointer;
 }
 
 .stats-card {
@@ -28,12 +33,18 @@ body {
     border-radius: 7px;
     padding: 1%;
     margin: 1%;
-    width: 100%;
+    flex: 1 1 0; 
     text-align: center;
+    box-sizing: border-box; 
+}
+
+.stats-card:hover, .game-card:hover, .stats-container:hover {
+    cursor: pointer;
+    box-shadow: 0 0 30px lightblue;
 }
 
 #num-contributions, #total-raised, #num-games {
-    font-size: 50px;
+    font-size: 32px;
 }
 
 #games-container {
@@ -57,13 +68,13 @@ body {
     border-radius: 7px;
 }
 
-.game-card:hover {
-    cursor: pointer;
-    box-shadow: 0 0 30px lightblue;
-}
-
 #button-container {
     text-align: center;
+}
+
+#unfunded-btn:hover, #funded-btn:hover, #all-btn:hover{
+    box-shadow: 0 0 30px lightblue;
+    cursor: pointer;
 }
 
 button {
